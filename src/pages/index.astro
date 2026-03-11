@@ -13,6 +13,7 @@ import {
   User,
 } from "lucide-astro";
 import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
+import LeafParticles from "../components/LeafParticles.jsx";
 ---
 
 <Layout 
@@ -206,8 +207,9 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
   </section>
 
   <!-- Depoimentos -->
-  <section id="depoimentos" class="py-24 bg-brand-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section id="depoimentos" class="py-24 bg-brand-white relative overflow-hidden">
+    <LeafParticles client:load count={12} color="#C9A96A" />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <AnimatedSection className="mb-16" client:visible>
         <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">
           A Voz de Quem Transformou Sua Jornada
@@ -263,9 +265,10 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
   <!-- Contato -->
   <section
     id="contato"
-    class="py-24 bg-brand-light border-b border-brand-green/10"
+    class="py-24 bg-brand-light border-b border-brand-green/10 relative overflow-hidden"
   >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <LeafParticles client:load count={15} color="#1F3A2E" />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <AnimatedSection
           className="flex flex-col justify-center"

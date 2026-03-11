@@ -10,14 +10,16 @@ import {
   Globe,
   Github
 } from "lucide-astro";
+import LeafParticles from "../components/LeafParticles.jsx";
 ---
 
 <Layout 
   title="Manual do Proprietário | Érika Spinola"
   description="Manual técnico e de identidade visual para o site profissional da Érika Spinola."
 >
-  <div class="bg-brand-light min-h-screen pt-32 md:pt-40 pb-24 text-brand-dark">
-    <div class="max-w-6xl mx-auto px-6">
+  <div class="bg-brand-light min-h-screen pt-32 md:pt-40 pb-24 text-brand-dark relative overflow-hidden">
+    <LeafParticles client:load count={25} color="#C9A96A" />
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
       
       <!-- Header do Manual -->
       <header class="mb-20 text-center">
