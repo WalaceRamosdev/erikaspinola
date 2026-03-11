@@ -4,29 +4,24 @@ import { User, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    text: "A terapia com a Érika foi o divisor de águas que eu precisava. Ela ouve com a alma. Sinto que voltei a me conectar com quem eu verdadeiramente sou sob uma nova perspectiva.",
-    name: "M. Silva",
-    role: "Paciente Online",
+    name: "T.",
+    text: "Você Érika foi fundamental nesse processo! Eu digo que foi Deus que colocou você na minha vida, para me fortalecer, estimular, segurando em minha mão o tempo todo! Você me ajudou e de mãos dadas comigo me arrancou do fundo do poço!",
+    role: "Paciente"
   },
   {
-    text: "Encontrei um espaço sem julgamentos onde consegui olhar para as feridas do passado com amorosidade, compreendendo os padrões da minha família de forma profunda.",
-    name: "João V.",
-    role: "Paciente Presencial",
+    name: "N.",
+    text: "Mais consciente, mais inteira, mais conectada com a minha verdade. Sei, com o coração tranquilo, que sem esse caminho e sem a presença da Kika, eu não seria quem sou hoje.",
+    role: "Paciente"
   },
   {
-    text: "A abordagem sistêmica aliada à transpessoal trouxe clareza que eu não tive em anos de terapia convencional. Érika é de um profissionalismo e sensibilidade ímpares.",
-    name: "Carla T.",
-    role: "Paciente Online",
+    name: "A.",
+    text: "Obrigada a você por estar do meu lado por mais de 70 sessões. Seja de 'merda a foguete', com toda a feijoada. Cada minuto com você vale ouro e sou muito grata pelo privilégio de ser paciente da Kika!",
+    role: "Paciente"
   },
   {
-    text: "Minha vida mudou completamente após as sessões. O acolhimento e a técnica da Érika são algo que nunca encontrei antes.",
-    name: "Ana P.",
-    role: "Paciente Online",
-  },
-  {
-    text: "Sempre tive medo de terapia, mas com a Érika me senti segura desde o primeiro momento. Recomendo para todos.",
-    name: "Ricardo M.",
-    role: "Paciente Presencial",
+    name: "D.",
+    text: "Meu primeiro contato com a terapia foi transformador. Desde o início me senti acolhida, ouvida e respeitada. O seu cuidado e a sensibilidade no atendimento fizeram toda a diferença no meu processo.",
+    role: "Paciente"
   }
 ];
 

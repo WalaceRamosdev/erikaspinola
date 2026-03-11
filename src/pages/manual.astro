@@ -1,0 +1,222 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { 
+  Palette, 
+  Type, 
+  Layout as LayoutIcon, 
+  Search, 
+  Settings, 
+  Smartphone,
+  Globe,
+  Star,
+  Zap,
+  CheckCircle2
+} from "lucide-astro";
+---
+
+<Layout 
+  title="Manual do Proprietário | Érika Spinola"
+  description="Manual técnico e de identidade visual para o site profissional da Érika Spinola."
+>
+  <div class="bg-white min-h-screen pt-32 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- Header do Manual -->
+      <header class="mb-20 text-center">
+        <div class="inline-block px-4 py-1.5 bg-brand-gold/10 text-brand-gold text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6">
+          Documentação do Projeto
+        </div>
+        <h1 class="font-serif text-5xl md:text-6xl text-brand-dark mb-6">Guia do Site</h1>
+        <p class="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+          Este guia contém as especificações técnicas, visuais e estruturais do seu site, garantindo que você compreenda como sua presença digital foi construída.
+        </p>
+      </header>
+
+      <!-- Grade de Informações -->
+      <div class="space-y-24">
+        
+        <!-- 1. Identidade Visual -->
+        <section class="space-y-10">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-green text-brand-white rounded-2xl flex items-center justify-center">
+              <Palette size={24} />
+            </div>
+            <h2 class="font-serif text-3xl text-brand-dark">Identidade Visual</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-brand-light rounded-3xl border border-brand-green/5">
+              <h3 class="font-bold flex items-center gap-2 mb-6">
+                <div class="w-2 h-2 bg-brand-gold rounded-full"></div>
+                Paleta de Cores
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <div class="h-16 w-full bg-[#1F3A2E] rounded-xl shadow-inner"></div>
+                  <p class="text-[10px] font-mono text-center">#1F3A2E<br/>Brand Green</p>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-16 w-full bg-[#C9A96A] rounded-xl shadow-inner"></div>
+                  <p class="text-[10px] font-mono text-center">#C9A96A<br/>Brand Gold</p>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-16 w-full bg-[#F8F8F8] rounded-xl shadow-inner border border-zinc-200"></div>
+                  <p class="text-[10px] font-mono text-center">#F8F8F8<br/>Brand White</p>
+                </div>
+                <div class="space-y-2">
+                  <div class="h-16 w-full bg-[#11221B] rounded-xl shadow-inner"></div>
+                  <p class="text-[10px] font-mono text-center">#11221B<br/>Brand Dark</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 bg-brand-light rounded-3xl border border-brand-green/5">
+              <h3 class="font-bold flex items-center gap-2 mb-6">
+                <div class="w-2 h-2 bg-brand-gold rounded-full"></div>
+                Tipografia
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <p class="text-xs text-brand-dark/40 uppercase tracking-widest mb-2 font-bold">Títulos (Serif)</p>
+                  <p class="font-serif text-2xl text-brand-dark">Playfair Display</p>
+                </div>
+                <div>
+                  <p class="text-xs text-brand-dark/40 uppercase tracking-widest mb-2 font-bold">Textos (Sans)</p>
+                  <p class="font-sans text-xl text-brand-dark">Inter / Lato</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Estrutura do Site -->
+        <section class="space-y-10">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-green text-brand-white rounded-2xl flex items-center justify-center">
+              <LayoutIcon size={24} />
+            </div>
+            <h2 class="font-serif text-3xl text-brand-dark">Arquitetura de Navegação</h2>
+          </div>
+
+          <div class="border-l-2 border-brand-gold/20 ml-6 pl-8 space-y-12">
+            <div class="relative">
+              <div class="absolute -left-10 top-1 w-4 h-4 bg-brand-gold rounded-full ring-4 ring-white"></div>
+              <h4 class="font-bold text-brand-dark text-lg mb-2">Hero Section</h4>
+              <p class="text-sm text-brand-dark/60 leading-relaxed">Impacto inicial com imagem premium em FullHD, sobreposição de gradientes para legibilidade e Logo Profissional centralizada.</p>
+            </div>
+            <div class="relative">
+              <div class="absolute -left-10 top-1 w-4 h-4 bg-brand-gold rounded-full ring-4 ring-white"></div>
+              <h4 class="font-bold text-brand-dark text-lg mb-2">Sobre Mim & O Processo</h4>
+              <p class="text-sm text-brand-dark/60 leading-relaxed">Apresentação da profissional e detalhamento do atendimento psicoterapêutico transpessoal sistêmico.</p>
+            </div>
+            <div class="relative">
+              <div class="absolute -left-10 top-1 w-4 h-4 bg-brand-gold rounded-full ring-4 ring-white"></div>
+              <h4 class="font-bold text-brand-dark text-lg mb-2">Depoimentos Dinâmicos</h4>
+              <p class="text-sm text-brand-dark/60 leading-relaxed">Carrossel interativo construído com React e Framer Motion, exibindo mensagens reais de pacientes de forma fluida.</p>
+            </div>
+            <div class="relative">
+              <div class="absolute -left-10 top-1 w-4 h-4 bg-brand-gold rounded-full ring-4 ring-white"></div>
+              <h4 class="font-bold text-brand-dark text-lg mb-2">Contato Estruturado</h4>
+              <p class="text-sm text-brand-dark/60 leading-relaxed">Formulário integrado e botões de ação rápida para WhatsApp, direcionados para Lauro de Freitas.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. SEO e Presença Digital -->
+        <section class="space-y-10">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-brand-green text-brand-white rounded-2xl flex items-center justify-center">
+              <Search size={24} />
+            </div>
+            <h2 class="font-serif text-3xl text-brand-dark">SEO & Performance local</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-brand-green text-brand-white rounded-3xl">
+              <div class="mb-4 text-brand-gold"><Globe size={20} /></div>
+              <h3 class="font-bold mb-2">Geo-Localização</h3>
+              <p class="text-xs text-brand-white/70 leading-relaxed">Metadados configurados para Lauro de Freitas e Vilas do Atlântico (BA).</p>
+            </div>
+            <div class="p-6 bg-brand-green text-brand-white rounded-3xl">
+              <div class="mb-4 text-brand-gold"><Zap size={20} /></div>
+              <h3 class="font-bold mb-2">Google Tag Manager</h3>
+              <p class="text-xs text-brand-white/70 leading-relaxed">Scripts instalados para acompanhamento de métricas e conversão.</p>
+            </div>
+            <div class="p-6 bg-brand-green text-brand-white rounded-3xl">
+              <div class="mb-4 text-brand-gold"><CheckCircle2 size={20} /></div>
+              <h3 class="font-bold mb-2">Schema Business</h3>
+              <p class="text-xs text-brand-white/70 leading-relaxed">Dados estruturados em JSON-LD para melhor indexação local (Google Maps).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Resumo Técnico -->
+        <section class="p-8 md:p-12 bg-zinc-900 text-brand-white rounded-[3rem] space-y-10 overflow-hidden relative">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+          
+          <div class="flex items-center gap-4 mb-10">
+            <div class="w-12 h-12 bg-brand-gold text-brand-green rounded-2xl flex items-center justify-center">
+              <Settings size={24} />
+            </div>
+            <h2 class="font-serif text-3xl">Ecossistema Técnico</h2>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Framework</p>
+              <p class="text-lg font-medium">Astro v4.0</p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Estilização</p>
+              <p class="text-lg font-medium">Tailwind CSS</p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Interação</p>
+              <p class="text-lg font-medium">React + Framer</p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Hospedagem</p>
+              <p class="text-lg font-medium">Vercel</p>
+            </div>
+          </div>
+
+          <div class="pt-10 border-t border-white/10 mt-10">
+            <div class="flex items-center gap-3 text-brand-gold mb-6">
+              <Smartphone size={20} />
+              <p class="text-sm font-bold uppercase tracking-widest">Mobile First & Responsividade</p>
+            </div>
+            <p class="text-brand-white/60 text-sm max-w-2xl leading-relaxed">
+              O site foi desenvolvido com foco total em dispositivos móveis, apresentando um menu minimalista de alto padrão e textos adaptáveis que garantem uma experiência fluida de 320px a 2560px de largura.
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer do Manual -->
+      <footer class="mt-32 pt-16 border-t border-zinc-200 text-center">
+        <p class="text-brand-dark/40 text-sm mb-6 uppercase tracking-widest">Suporte e Atualizações</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <a href="https://wa.me/5511999999999" class="px-8 py-4 bg-brand-green text-brand-white rounded-full text-sm font-bold hover:bg-brand-gold transition-all duration-300">
+            Falar com Desenvolvedor
+          </a>
+          <a href="/" class="text-brand-dark font-bold text-sm underline decoration-brand-gold underline-offset-8">
+            Voltar para o Site
+          </a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Custom refinements for the manual page */
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+  
+  section {
+    position: relative;
+    z-index: 1;
+  }
+</style>
