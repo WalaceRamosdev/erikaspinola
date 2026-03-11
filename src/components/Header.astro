@@ -1,0 +1,137 @@
+---
+import { Instagram, Linkedin, Mail } from 'lucide-astro';
+---
+
+<header id="main-header" class="fixed w-full z-50 transition-all duration-500 py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-brand-green/80 backdrop-blur-md border border-brand-gold/10 rounded-full px-6 md:px-10 py-3 flex justify-between items-center shadow-2xl transition-all duration-500" id="header-container">
+      <!-- Logo Container -->
+      <a href="#" class="inline-block transition-all duration-300 hover:scale-105 group">
+        <div class="flex items-center gap-3">
+          <img src="/professional/logo.svg" alt="Ícone Érika Spinola" class="h-8 w-auto brightness-0 invert opacity-90 group-hover:rotate-12 transition-transform duration-500" />
+          <div class="h-6 w-px bg-brand-gold/30 hidden md:block"></div>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-12">
+        <a href="#sobre" class="nav-link text-brand-white/70 hover:text-brand-gold transition-all text-xs uppercase tracking-[0.3em] font-bold relative group py-2">
+          Sobre
+          <span class="absolute bottom-0 left-0 w-0 h-px bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#depoimentos" class="nav-link text-brand-white/70 hover:text-brand-gold transition-all text-xs uppercase tracking-[0.3em] font-bold relative group py-2">
+          Depoimentos
+          <span class="absolute bottom-0 left-0 w-0 h-px bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contato" class="nav-link text-brand-white/70 hover:text-brand-gold transition-all text-xs uppercase tracking-[0.3em] font-bold relative group py-2">
+          Contato
+          <span class="absolute bottom-0 left-0 w-0 h-px bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center lg:ml-8">
+        <a href="https://wa.me/5511999999999" target="_blank" class="px-8 py-3 bg-brand-gold text-brand-green font-bold rounded-full hover:bg-brand-white hover:scale-105 transition-all duration-500 shadow-lg shadow-brand-gold/10 text-[10px] uppercase tracking-[0.2em]">
+          Agendar Consulta
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-brand-gold p-2 relative z-[60]" aria-label="Menu">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 h-screen w-screen bg-brand-green z-[9999] flex flex-col opacity-0 pointer-events-none transition-all duration-300 md:hidden overflow-y-auto">
+    <!-- Header inside menu -->
+    <div class="flex justify-between items-center px-6 py-8">
+      <button id="mobile-close-button" class="text-brand-gold p-2 hover:scale-110 transition" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <img src="/professional/logoText.svg" alt="Érika Spinola" class="h-14 w-auto brightness-0 invert opacity-90" />
+      
+      <div class="w-12"></div> <!-- Spacer to center logo -->
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="flex-grow flex flex-col items-center justify-center space-y-10 py-12 px-6">
+      <a href="#sobre" class="mobile-link text-brand-white text-2xl font-bold tracking-[0.4em] uppercase hover:text-brand-gold transition-colors font-serif">Sobre</a>
+      <a href="#depoimentos" class="mobile-link text-brand-white text-2xl font-bold tracking-[0.4em] uppercase hover:text-brand-gold transition-colors font-serif">Depoimentos</a>
+      <a href="#contato" class="mobile-link text-brand-white text-2xl font-bold tracking-[0.4em] uppercase hover:text-brand-gold transition-colors font-serif">Contato</a>
+      
+      <div class="h-px w-16 bg-brand-gold/30 my-6"></div>
+
+      <!-- Secondary Links/Info -->
+      <p class="text-brand-gold/60 text-[10px] uppercase tracking-[0.3em] font-bold">Atendimento Online e Presencial</p>
+      <a href="https://wa.me/5511999999999" target="_blank" class="mobile-link text-brand-white/80 text-base font-medium hover:text-brand-gold transition-colors">Agendar Conversa</a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center space-x-12 p-12 shrink-0">
+      <a href="https://www.instagram.com/kika.terapeuta7/" target="_blank" rel="noopener noreferrer" class="text-brand-gold/60 hover:text-brand-gold transition"><Instagram size={28} /></a>
+      <a href="#" class="text-brand-gold/60 hover:text-brand-gold transition"><Linkedin size={28} /></a>
+      <a href="#" class="text-brand-gold/60 hover:text-brand-gold transition"><Mail size={28} /></a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const buttonOpen = document.getElementById('mobile-menu-button');
+  const buttonClose = document.getElementById('mobile-close-button');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('.mobile-link');
+  const mainHeader = document.getElementById('main-header');
+  const headerContainer = document.getElementById('header-container');
+
+  let isOpen = false;
+
+  // Header scroll appearance
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      mainHeader?.classList.remove('py-6');
+      mainHeader?.classList.add('py-3');
+      headerContainer?.classList.remove('bg-brand-green/80');
+      headerContainer?.classList.add('bg-brand-green/95', 'shadow-gold');
+    } else {
+      mainHeader?.classList.add('py-6');
+      mainHeader?.classList.remove('py-3');
+      headerContainer?.classList.add('bg-brand-green/80');
+      headerContainer?.classList.remove('bg-brand-green/95', 'shadow-gold');
+    }
+  });
+
+  function toggleMenu() {
+    isOpen = !isOpen;
+    if (isOpen) {
+      menu?.classList.remove('opacity-0', 'pointer-events-none');
+      menu?.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu?.classList.add('opacity-0', 'pointer-events-none');
+      menu?.classList.remove('opacity-100');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  buttonOpen?.addEventListener('click', toggleMenu);
+  buttonClose?.addEventListener('click', toggleMenu);
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isOpen) toggleMenu();
+    });
+  });
+</script>
+
+<style>
+  .shadow-gold {
+    box-shadow: 0 10px 30px -10px rgba(201, 169, 106, 0.2);
+  }
+</style>

@@ -1,0 +1,410 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AnimatedSection from "../components/AnimatedSection.jsx";
+import AnimatedCards from "../components/AnimatedCards.jsx";
+import {
+  Leaf,
+  HeartHandshake,
+  Eye,
+  Sparkles,
+  Navigation,
+  ArrowRight,
+  MessageCircle,
+  User,
+} from "lucide-astro";
+import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
+---
+
+<Layout title="Érika Spinola | Psicoterapia Transpessoal Sistêmica">
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-brand-green"
+  >
+    <!-- Background Image -->
+    <div
+      class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60"
+      style="background-image: url('/professional/hero-bg-premium.png');"
+    ></div>
+    
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 z-0 bg-gradient-to-b from-brand-green/80 via-brand-green/50 to-brand-green"
+    ></div>
+
+    <!-- Overlay Decoration -->
+    <div
+      class="absolute inset-0 z-0 opacity-[0.03]"
+      style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23F8F8F8\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="max-w-3xl mx-auto text-center">
+        <AnimatedSection
+          className="mb-8 flex flex-col items-center"
+          client:load
+        >
+          <img
+            src="/professional/logoText.svg"
+            alt="Logo Érika Spinola"
+            class="h-28 md:h-48 w-auto object-contain brightness-0 invert opacity-[0.9] mb-12 mx-auto drop-shadow-2xl"
+          />
+          <h1
+            class="text-5xl md:text-7xl font-serif text-brand-white leading-tight mb-8"
+          >
+            Cuidar da mente é um <br><span class="text-brand-gold italic"
+              >ato de transformação</span
+            >
+          </h1>
+          <p
+            class="text-lg md:text-xl text-brand-white/80 font-light leading-relaxed mb-12 max-w-2xl mx-auto"
+          >
+            Psicoterapia Transpessoal Sistêmica para quem busca equilíbrio
+            emocional, autoconhecimento e expansão da consciência.
+          </p>
+        </AnimatedSection>
+
+        <AnimatedSection
+          className="flex flex-col sm:flex-row gap-5 justify-center items-center"
+          delay={0.2}
+          client:load
+        >
+          <a
+            href="#contato"
+            class="w-full sm:w-auto px-8 py-4 bg-brand-gold text-brand-dark rounded-full font-semibold shadow-lg shadow-brand-gold/20 hover:scale-105 hover:-translate-y-1 transition duration-300 transform flex items-center justify-center border border-transparent"
+          >
+            Agendar Consulta
+            <ArrowRight class="ml-2 w-5 h-5" />
+          </a>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            class="w-full sm:w-auto px-8 py-4 bg-transparent border border-brand-white/30 text-brand-white rounded-full font-semibold hover:border-brand-gold hover:bg-brand-gold hover:text-brand-dark transition duration-300 flex items-center justify-center backdrop-blur-sm"
+          >
+            Falar no WhatsApp
+            <MessageCircle class="ml-2 w-5 h-5" />
+          </a>
+        </AnimatedSection>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a Psicoterapeuta -->
+  <section id="sobre" class="py-24 bg-brand-light relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2">
+          <AnimatedSection client:visible>
+            <!-- Usando o placeholder para imagem premium, poderia ser a imagem da Érika -->
+            <div class="relative w-full aspect-[4/5] max-w-md mx-auto">
+              <div
+                class="absolute inset-0 bg-brand-green translate-x-4 translate-y-4 rounded-xl opacity-20"
+              >
+              </div>
+              <img
+                src="/professional/erika3.svg"
+                alt="Érika Spinola - Psicoterapeuta"
+                class="relative w-full h-full object-cover rounded-xl shadow-2xl border border-white/50"
+              />
+            </div>
+          </AnimatedSection>
+        </div>
+        <div class="w-full md:w-1/2 space-y-8">
+          <AnimatedSection className="space-y-6" client:visible>
+            <h2
+              class="text-brand-green text-sm uppercase tracking-[0.2em] font-bold"
+            >
+              Sobre Mim
+            </h2>
+            <h3 class="font-serif text-4xl md:text-5xl text-brand-dark">
+              Prazer, <span class="text-brand-gold italic">Érika Spinola</span>
+            </h3>
+            <div class="w-16 h-0.5 bg-brand-gold"></div>
+            <p class="text-brand-dark/80 font-light leading-relaxed text-lg">
+              Com uma <strong class="text-brand-green font-medium"
+                >abordagem humanizada</strong
+              > e profunda, trabalho ajudando pessoas a atravessarem momentos difíceis,
+              encontrando novos significados para suas histórias de vida e buscando
+              uma transformação pessoal duradoura.
+            </p>
+            <p class="text-brand-dark/80 font-light leading-relaxed text-lg">
+              Minha experiência é focada na <strong
+                class="text-brand-green font-medium"
+                >escuta ativa e profunda</strong
+              >, proporcionando um ambiente acolhedor, onde você se sinta
+              seguro(a) para explorar suas emoções mais íntimas e processos
+              sistêmicos.
+            </p>
+          </AnimatedSection>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona (Redesigned with Original Text) -->
+  <section class="mt-48 pt-32 pb-32 bg-brand-green relative overflow-hidden w-full">
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 30L0 0h60L30 30z\' fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');"></div>
+    
+    <div class="px-4 sm:px-12 lg:px-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+        
+        <!-- Left Side: Title & Info -->
+        <div class="space-y-8">
+          <AnimatedSection client:visible>
+            <span class="text-brand-gold text-sm uppercase tracking-[0.3em] font-bold mb-4 block">A Jornada</span>
+            <h2 class="font-serif text-4xl md:text-6xl text-brand-white leading-tight mb-8">
+              Como funcionam as <span class="text-brand-gold italic">sessões</span>
+            </h2>
+            <p class="text-brand-white/70 font-light text-lg leading-relaxed max-w-md">
+              Uma abordagem terapêutica estruturada e acolhedora, focada no seu desenvolvimento e bem-estar emocional.
+            </p>
+          </AnimatedSection>
+        </div>
+
+        <!-- Right Side: Steps -->
+        <div class="space-y-12">
+          {
+            [
+              {
+                step: "01",
+                title: "Primeiro Contato",
+                desc: "Uma conversa inicial para entender seu momento, suas necessidades em um ambiente seguro de acolhimento.",
+              },
+              {
+                step: "02",
+                title: "Desenvolvimento Personalizado",
+                desc: "Encontros semanais estruturados porém fluídos, com base na escuta ativa e nas abordagens sistêmicas e transpessoais.",
+              },
+              {
+                step: "03",
+                title: "Processo de Transformação",
+                desc: "A colheita dos resultados, maior leveza nas dinâmicas emocionais, mudanças na percepção de si e do mundo.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection client:visible delay={i * 0.1} className="flex gap-8 group">
+                <span class="font-serif text-4xl md:text-5xl text-brand-gold opacity-40 group-hover:opacity-100 transition-opacity duration-500 leading-none">
+                  {item.step}
+                </span>
+                <div class="space-y-3">
+                  <h3 class="font-serif text-2xl text-brand-white group-hover:text-brand-gold transition-colors duration-500">
+                    {item.title}
+                  </h3>
+                  <p class="text-brand-white/60 font-light leading-relaxed text-base max-w-md">
+                    {item.desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))
+          }
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-24 bg-brand-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <AnimatedSection className="mb-16" client:visible>
+        <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-4">
+          A Voz de Quem Transformou Sua Jornada
+        </h2>
+        <p class="text-brand-dark/60 font-light max-w-2xl mx-auto">
+          Relatos e vivências de quem buscou apoio e encontrou acolhimento na
+          terapia.
+        </p>
+      </AnimatedSection>
+
+      <AnimatedSection client:visible>
+        <TestimonialCarousel client:load />
+      </AnimatedSection>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="py-28 bg-brand-green relative flex items-center justify-center"
+  >
+    <div
+      class="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay"
+    >
+    </div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <AnimatedSection client:visible>
+        <h2 class="font-serif text-5xl md:text-6xl text-brand-gold mb-8 italic">
+          Comece seu processo de transformação
+        </h2>
+        <p class="text-brand-white/80 text-xl font-light mb-12">
+          Não é preciso caminhar sozinho(a). Dar o primeiro passo em direção ao
+          autoconhecimento é permitir-se florescer.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a
+            href="#contato"
+            class="px-8 py-4 bg-brand-white text-brand-green rounded-full font-semibold shadow-xl hover:bg-brand-light transition duration-300 transform hover:-translate-y-1"
+          >
+            Agendar Primeira Sessão
+          </a>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            class="px-8 py-4 bg-brand-gold text-brand-dark rounded-full font-semibold shadow-xl hover:-translate-y-1 transition duration-300 transform"
+          >
+            Conversar no WhatsApp
+          </a>
+        </div>
+      </AnimatedSection>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section
+    id="contato"
+    class="py-24 bg-brand-light border-b border-brand-green/10"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <AnimatedSection
+          className="flex flex-col justify-center"
+          client:visible
+        >
+          <span
+            class="text-brand-green text-sm uppercase font-bold tracking-[0.2em] mb-4 block"
+            >Conecte-se</span
+          >
+          <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-6">
+            Vamos conversar?
+          </h2>
+          <p
+            class="text-brand-dark/70 font-light mb-10 max-w-md leading-relaxed text-lg"
+          >
+            Sinta-se à vontade para enviar uma mensagem com suas dúvidas ou
+            preencher o formulário para iniciarmos nossa jornada juntos.
+          </p>
+
+          <div
+            class="space-y-6 bg-brand-white p-8 rounded-2xl shadow-sm border border-brand-green/10"
+          >
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 bg-brand-gold/20 text-brand-dark rounded-full flex items-center justify-center"
+              >
+                <MessageCircle size={20} />
+              </div>
+              <div>
+                <span
+                  class="block text-xs text-brand-dark/50 font-bold uppercase tracking-wider mb-1"
+                  >WhatsApp direto</span
+                >
+                <a
+                  href="https://wa.me/5511999999999"
+                  class="text-lg font-medium text-brand-green hover:text-brand-gold transition"
+                  >(11) 99999-9999</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-4 pt-6 border-t border-brand-green/10"
+            >
+              <div
+                class="w-12 h-12 bg-brand-gold/20 text-brand-dark rounded-full flex items-center justify-center"
+              >
+                <Navigation size={20} />
+              </div>
+              <div>
+                <span
+                  class="block text-xs text-brand-dark/50 font-bold uppercase tracking-wider mb-1"
+                  >Email Profissional</span
+                >
+                <a
+                  href="mailto:contato@erikaspinola.com.br"
+                  class="text-lg font-medium text-brand-green hover:text-brand-gold transition"
+                  >contato@erikaspinola.com.br</a
+                >
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection client:visible>
+          <form
+            class="bg-brand-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-green/5"
+          >
+            <h3 class="font-serif text-2xl text-brand-dark mb-8">
+              Envie uma Mensagem
+            </h3>
+
+            <div class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-brand-dark/70 mb-2"
+                  >Nome Completo</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
+                  placeholder="Seu nome"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-brand-dark/70 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-brand-dark/70 mb-2"
+                    >Telefone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
+                    placeholder="(11) 90000-0000"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-brand-dark/70 mb-2"
+                  >Sua Mensagem</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition resize-none"
+                  placeholder="Escreva aqui como posso te ajudar..."></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="w-full bg-brand-green text-brand-white py-4 rounded-xl font-semibold hover:bg-brand-dark transition-colors duration-300 shadow-md flex items-center justify-center group"
+              >
+                Enviar Mensagem
+                <ArrowRight
+                  class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                />
+              </button>
+            </div>
+          </form>
+        </AnimatedSection>
+      </div>
+    </div>
+  </section>
+</Layout>

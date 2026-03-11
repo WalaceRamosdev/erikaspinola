@@ -1,0 +1,59 @@
+---
+import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-astro';
+---
+
+<footer class="bg-brand-dark text-brand-white/70 py-16 border-t border-brand-green/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
+    
+    <div class="col-span-1 md:col-span-4 space-y-6">
+      <img src="/professional/logoText.svg" alt="Érika Spinola" class="w-48 md:w-64 scale-[1.3] origin-left object-contain brightness-0 invert opacity-90 mb-4" />
+      <p class="text-sm leading-relaxed max-w-sm">
+        Psicoterapeuta Especialista em Abordagem Transpessoal Sistêmica, promovendo autoconhecimento, equilíbrio e expansão da consciência.
+      </p>
+      <div class="flex space-x-4 pt-2">
+        <a href="https://www.instagram.com/kika.terapeuta7/" target="_blank" rel="noopener noreferrer" class="text-brand-gold/80 hover:text-brand-gold transition"><Instagram size={22} /></a>
+        <a href="#" class="text-brand-gold/80 hover:text-brand-gold transition"><Linkedin size={22} /></a>
+      </div>
+    </div>
+
+    <div class="col-span-1 md:col-span-3 space-y-6">
+      <h4 class="font-sans uppercase text-xs tracking-[0.2em] text-brand-white font-semibold mb-4">Acesso Rápido</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="#sobre" class="hover:text-brand-gold transition">Sobre Mim</a></li>
+        <li><a href="#depoimentos" class="hover:text-brand-gold transition">Depoimentos</a></li>
+      </ul>
+    </div>
+
+    <div class="col-span-1 md:col-span-5 space-y-6">
+      <h4 class="font-sans uppercase text-xs tracking-[0.2em] text-brand-white font-semibold mb-4">Contato</h4>
+      <ul class="space-y-4 text-sm">
+        <li class="flex items-start space-x-3">
+          <Phone size={18} class="text-brand-gold flex-shrink-0 mt-0.5" />
+          <span>(11) 99999-9999</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <Mail size={18} class="text-brand-gold flex-shrink-0 mt-0.5" />
+          <span>contato@erikaspinola.com.br</span>
+        </li>
+        <li class="flex items-start space-x-3">
+          <MapPin size={18} class="text-brand-gold flex-shrink-0 mt-0.5" />
+          <span>Atendimento Presencial e Online (São Paulo, SP)</span>
+        </li>
+      </ul>
+      
+      <div class="pt-4">
+        <a href="https://wa.me/5511999999999" class="inline-flex py-3 px-8 rounded-full border border-brand-gold text-brand-gold text-sm font-medium tracking-wide hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+          Entrar em Contato
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-brand-white/10 flex flex-col md:flex-row justify-between items-center text-xs">
+    <p>&copy; {new Date().getFullYear()} Érika Spinola. Todos os direitos reservados.</p>
+    <div class="flex space-x-6 mt-4 md:mt-0">
+      <a href="#" class="hover:text-brand-white">Termos de Uso</a>
+      <a href="#" class="hover:text-brand-white">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
