@@ -6,7 +6,9 @@ import {
   Search, 
   ChevronLeft,
   Settings,
-  Smartphone
+  Smartphone,
+  Globe,
+  Github
 } from "lucide-astro";
 ---
 
@@ -14,8 +16,9 @@ import {
   title="Manual do Proprietário | Érika Spinola"
   description="Manual técnico e de identidade visual para o site profissional da Érika Spinola."
 >
-  <div class="bg-brand-light min-h-screen pt-40 pb-24 text-brand-dark">
-    <div class="max-w-5xl mx-auto px-6">
+  <div class="bg-brand-light min-h-screen pt-32 md:pt-40 pb-24 text-brand-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      
       <!-- Header do Manual -->
       <header class="mb-20 text-center">
         <div class="inline-block px-4 py-1.5 bg-brand-gold/20 text-brand-dark text-[10px] font-black underline decoration-brand-gold underline-offset-4 uppercase tracking-[0.3em] rounded-sm mb-8">
@@ -28,12 +31,12 @@ import {
       </header>
 
       <!-- Grade de Informações -->
-      <div class="space-y-16">
+      <div class="space-y-12 md:space-y-20">
         
         <!-- 1. Identidade Visual -->
         <section class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5">
           <div class="flex items-center gap-6 mb-12">
-            <div class="w-14 h-14 bg-brand-green text-brand-white rounded-2xl flex items-center justify-center shadow-lg shadow-brand-green/20">
+            <div class="w-14 h-14 bg-brand-green text-brand-white rounded-2xl flex items-center justify-center shadow-lg shadow-brand-green/20 shrink-0">
               <Palette size={28} />
             </div>
             <div>
@@ -42,190 +45,199 @@ import {
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+            <!-- Cores -->
+            <div class="lg:col-span-7">
               <h3 class="font-black text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-8 flex items-center gap-3">
                 <span class="w-8 h-px bg-brand-gold"></span>
                 Paleta de Cores
               </h3>
-              <div class="grid grid-cols-2 gap-6">
-                <!-- Color items -->
-                <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#1F3A2E] rounded-2xl shadow-md border border-brand-green/10"></div>
-                  <div class="mt-4">
-                    <p class="text-xs font-bold font-sans">Brand Green</p>
-                    <p class="text-[10px] font-mono text-brand-dark/40">#1F3A2E</p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <!-- Brand Green -->
+                <div class="space-y-3">
+                  <div class="h-20 w-full bg-[#1F3A2E] rounded-xl shadow-inner border border-black/5"></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-tighter">Green</p>
+                    <p class="text-[9px] font-mono text-brand-dark/40">#1F3A2E</p>
                   </div>
                 </div>
-                <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#C9A96A] rounded-2xl shadow-md border border-brand-green/10"></div>
-                  <div class="mt-4">
-                    <p class="text-xs font-bold font-sans">Brand Gold</p>
-                    <p class="text-[10px] font-mono text-brand-dark/40">#C9A96A</p>
+                <!-- Brand Gold -->
+                <div class="space-y-3">
+                  <div class="h-20 w-full bg-[#C9A96A] rounded-xl shadow-inner border border-black/5"></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-tighter">Gold</p>
+                    <p class="text-[9px] font-mono text-brand-dark/40">#C9A96A</p>
                   </div>
                 </div>
-                <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#F8F8F8] rounded-2xl shadow-md border border-brand-green/10"></div>
-                  <div class="mt-4">
-                    <p class="text-xs font-bold font-sans">Brand White</p>
-                    <p class="text-[10px] font-mono text-brand-dark/40">#F8F8F8</p>
+                <!-- Brand White -->
+                <div class="space-y-3">
+                  <div class="h-20 w-full bg-[#F8F8F8] rounded-xl shadow-inner border border-black/5"></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-tighter">White</p>
+                    <p class="text-[9px] font-mono text-brand-dark/40">#F8F8F8</p>
                   </div>
                 </div>
-                <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#11221B] rounded-2xl shadow-md border border-brand-green/10"></div>
-                  <div class="mt-4">
-                    <p class="text-xs font-bold font-sans">Brand Dark</p>
-                    <p class="text-[10px] font-mono text-brand-dark/40">#11221B</p>
+                <!-- Brand Dark -->
+                <div class="space-y-3">
+                  <div class="h-20 w-full bg-[#11221B] rounded-xl shadow-inner border border-black/5"></div>
+                  <div>
+                    <p class="text-[10px] font-bold uppercase tracking-tighter">Dark</p>
+                    <p class="text-[9px] font-mono text-brand-dark/40">#11221B</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="bg-brand-light rounded-3xl p-8 border border-brand-green/10">
+            <!-- Tipografia -->
+            <div class="lg:col-span-5 bg-brand-light rounded-3xl p-8 border border-brand-green/10">
               <h3 class="font-black text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-8 flex items-center gap-3">
                 <span class="w-8 h-px bg-brand-gold"></span>
                 Tipografia
               </h3>
-              <div class="space-y-10">
+              <div class="space-y-8">
                 <div>
-                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black font-sans">Fonte Principal (Luxo)</p>
-                  <p class="font-serif text-4xl leading-tight">Playfair Display</p>
-                  <p class="text-xs text-brand-dark/60 mt-2 font-serif italic">Transpessoalidade e elegância.</p>
+                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-2 font-black">Fonte Principal</p>
+                  <p class="font-serif text-3xl">Playfair Display</p>
                 </div>
                 <div>
-                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black font-sans">Fonte de Apoio (Leitura)</p>
-                  <p class="font-sans text-2xl font-medium">Inter / Lato</p>
-                  <p class="text-xs text-brand-dark/60 mt-2">Clareza científica e equilíbrio.</p>
+                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-2 font-black">Fonte de Apoio</p>
+                  <p class="font-sans text-xl font-medium">Inter / Lato</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- 2. Estrutura e SEO -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <section class="lg:col-span-2 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5 space-y-10">
+        <!-- 2. Arquitetura e Conteúdo -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Estrutura -->
+          <div class="lg:col-span-2 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5 space-y-10">
             <div class="flex items-center gap-5">
-              <div class="w-12 h-12 bg-white border-2 border-brand-gold text-brand-gold rounded-2xl flex items-center justify-center leading-none">
+              <div class="w-12 h-12 bg-white border-2 border-brand-gold text-brand-gold rounded-2xl flex items-center justify-center shrink-0">
                 <LayoutIcon size={24} />
               </div>
               <h2 class="font-serif text-3xl">Arquitetura</h2>
             </div>
             
-            <div class="space-y-8">
-              <div class="flex gap-6">
-                <div class="text-brand-gold font-serif text-2xl italic">01</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+              <div class="flex gap-4">
+                <div class="text-brand-gold font-serif text-2xl italic shrink-0">01</div>
                 <div>
-                  <h4 class="font-bold uppercase tracking-widest text-[10px] mb-2 font-sans opacity-40">Seção Inicial</h4>
+                  <p class="text-[9px] uppercase font-black tracking-widest text-brand-dark/30 mb-1">Impacto</p>
                   <p class="text-lg font-serif">Hero Premium</p>
-                  <p class="text-sm text-brand-dark/60 leading-relaxed mt-1">Impacto máximo e conversão imediata.</p>
+                  <p class="text-xs text-brand-dark/60 mt-2 leading-relaxed">Seção inicial com design de luxo e CTA clara.</p>
                 </div>
               </div>
-              <div class="flex gap-6">
-                <div class="text-brand-gold font-serif text-2xl italic">02</div>
+              <div class="flex gap-4">
+                <div class="text-brand-gold font-serif text-2xl italic shrink-0">02</div>
                 <div>
-                  <h4 class="font-bold uppercase tracking-widest text-[10px] mb-2 font-sans opacity-40">Social Proof</h4>
-                  <p class="text-lg font-serif">Depoimentos Dinâmicos</p>
-                  <p class="text-sm text-brand-dark/60 leading-relaxed mt-1">Mensagens autênticas em carrossel React.</p>
+                  <p class="text-[9px] uppercase font-black tracking-widest text-brand-dark/30 mb-1">Confiança</p>
+                  <p class="text-lg font-serif">Depoimentos</p>
+                  <p class="text-xs text-brand-dark/60 mt-2 leading-relaxed">Carrossel dinâmico com prova social autêntica.</p>
                 </div>
               </div>
-            </div>
-          </section>
-
-        <!-- 3. Domínio e Repositório -->
-        <section class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5">
-          <div class="flex items-center gap-6 mb-12">
-            <div class="w-14 h-14 bg-brand-gold text-brand-dark rounded-2xl flex items-center justify-center shadow-lg shadow-brand-gold/20 leading-none">
-              <span class="text-xl">🌐</span>
-            </div>
-            <div>
-              <h2 class="font-serif text-3xl">Domínio e Acesso</h2>
-              <p class="text-sm text-brand-dark/50">Endereços oficiais da presença digital.</p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-6 bg-brand-light rounded-3xl border border-brand-green/5">
-              <h4 class="font-bold uppercase tracking-widest text-[10px] mb-4 font-sans opacity-60">Endereço Oficial</h4>
-              <a href="https://www.erikaspinola.com.br" target="_blank" class="text-lg font-serif text-brand-green hover:text-brand-gold transition-colors break-all">
-                erikaspinola.com.br
-              </a>
-              <p class="text-[10px] text-brand-dark/40 mt-2 font-sans font-bold uppercase tracking-widest">Domínio Principal Ativo</p>
-            </div>
-            <div class="p-6 bg-brand-light rounded-3xl border border-brand-green/5">
-              <h4 class="font-bold uppercase tracking-widest text-[10px] mb-4 font-sans opacity-60">Código Fonte (Git)</h4>
-              <a href="https://github.com/WalaceRamosdev/erikaspinola.git" target="_blank" class="text-xs font-mono text-brand-dark/70 hover:text-brand-gold transition-colors break-all">
-                WalaceRamosdev/erikaspinola
-              </a>
-              <p class="text-[10px] text-brand-dark/40 mt-2 font-sans font-bold uppercase tracking-widest">Repositório GitHub</p>
+          <!-- SEO Local -->
+          <div class="bg-brand-green rounded-[2.5rem] p-8 md:p-10 text-brand-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+            <div>
+              <div class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center mb-8 shrink-0">
+                <Search size={24} />
+              </div>
+              <h2 class="font-serif text-3xl mb-4">SEO Local</h2>
+              <p class="text-xs text-brand-white/70 leading-relaxed mb-8 font-light">Estratégia focada em <strong class="text-brand-gold font-bold">Lauro de Freitas</strong> e região.</p>
+              
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+                  <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
+                  Google Business Profile
+                </li>
+                <li class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+                  <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
+                  Schema JSON-LD
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <!-- 4. Resumo Técnico e SEO -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <section class="lg:col-span-2 p-8 md:p-12 bg-zinc-900 text-brand-white rounded-[2.5rem] space-y-10 overflow-hidden relative border border-white/5">
-             <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-             <div class="flex items-center gap-4 mb-10">
-               <div class="w-12 h-12 bg-brand-gold text-brand-green rounded-2xl flex items-center justify-center">
-                 <Settings size={24} />
-               </div>
-               <h2 class="font-serif text-3xl">Ecossistema</h2>
-             </div>
-             <div class="grid grid-cols-2 gap-8">
-               <div>
-                  <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">Fronte-end</p>
-                  <p class="text-lg font-serif">Astro + React</p>
-               </div>
-               <div>
-                  <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">Hospedagem</p>
-                  <p class="text-lg font-serif">Vercel Edge</p>
-               </div>
-             </div>
-          </section>
-
-          <section class="bg-brand-green rounded-[2.5rem] p-8 md:p-10 text-brand-white shadow-xl flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+        <!-- 3. Domínio e Acesso Técnico -->
+        <section class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5">
+          <div class="flex items-center gap-6 mb-12">
+            <div class="w-14 h-14 bg-brand-gold text-brand-dark rounded-2xl flex items-center justify-center shadow-lg shadow-brand-gold/20 shrink-0">
+              <Globe size={28} />
+            </div>
             <div>
-              <div class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center mb-8">
-                <Search size={24} />
-              </div>
-              <h2 class="font-serif text-3xl mb-4">SEO Local</h2>
-              <p class="text-xs text-brand-white/70 leading-relaxed mb-8">Foco em Lauro de Freitas e Vilas do Atlântico.</p>
-              
-              <ul class="space-y-4">
-                <li class="flex items-center gap-3 text-xs font-sans font-bold uppercase tracking-widest">
-                  <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
-                  Google Business
-                </li>
-                <li class="flex items-center gap-3 text-xs font-sans font-bold uppercase tracking-widest">
-                  <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
-                  JSON-LD Schema
-                </li>
-              </ul>
+              <h2 class="font-serif text-3xl">Acesso Técnico</h2>
+              <p class="text-sm text-brand-dark/50">Endereços e repositório oficial.</p>
             </div>
-            
-            <div class="mt-12 pt-8 border-t border-white/10">
-              <p class="text-[9px] uppercase tracking-widest font-black text-brand-gold font-sans mb-1">Performance</p>
-              <p class="text-2xl font-serif">A+ Mobile</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div class="p-8 bg-brand-light rounded-3xl border border-brand-green/5 group hover:border-brand-gold/30 transition-colors">
+              <p class="text-[9px] uppercase font-black tracking-widest text-brand-dark/30 mb-4">Domínio Oficial</p>
+              <a href="https://www.erikaspinola.com.br" target="_blank" class="text-xl md:text-2xl font-serif text-brand-green hover:text-brand-dark transition-colors inline-flex items-center gap-3">
+                erikaspinola.com.br
+                <span class="text-xs opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+              </a>
             </div>
-          </section>
-        </div>
+            <div class="p-8 bg-brand-light rounded-3xl border border-brand-green/5 group hover:border-brand-gold/30 transition-colors">
+              <p class="text-[9px] uppercase font-black tracking-widest text-brand-dark/30 mb-4">Repositório GitHub</p>
+              <a href="https://github.com/WalaceRamosdev/erikaspinola.git" target="_blank" class="text-sm md:text-base font-mono text-brand-dark/70 hover:text-brand-dark transition-colors break-all inline-flex items-center gap-3">
+                WalaceRamosdev/erikaspinola
+                <Github size={14} class="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ecossistema -->
+        <section class="bg-zinc-900 rounded-[2.5rem] p-8 md:p-12 text-brand-white overflow-hidden relative border border-white/5">
+           <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+           
+           <div class="flex items-center gap-4 mb-12 relative z-10">
+             <div class="w-12 h-12 bg-brand-gold text-brand-green rounded-2xl flex items-center justify-center shrink-0">
+               <Settings size={24} />
+             </div>
+             <h2 class="font-serif text-3xl">Ecossistema</h2>
+           </div>
+           
+           <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 relative z-10 text-center lg:text-left">
+             <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">Engine</p>
+                <p class="text-lg font-serif">Astro 4.0</p>
+             </div>
+             <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">UI Library</p>
+                <p class="text-lg font-serif">React + Framer</p>
+             </div>
+             <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">Styling</p>
+                <p class="text-lg font-serif">Tailwind CSS</p>
+             </div>
+             <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[9px] uppercase tracking-widest text-brand-gold font-black mb-2 opacity-60">Deploy</p>
+                <p class="text-lg font-serif">Vercel Edge</p>
+             </div>
+           </div>
+        </section>
 
         <!-- Botões Finais -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-12 py-12 border-t border-brand-green/10">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 py-12 border-t border-brand-green/10">
           <a href="/" class="group flex items-center gap-4 text-brand-dark font-black uppercase tracking-[0.2em] text-[10px] font-sans">
-             <div class="w-8 h-8 border border-brand-dark/10 rounded-full flex items-center justify-center group-hover:bg-brand-dark group-hover:text-brand-white transition-all">
-                <ChevronLeft size={14} />
+             <div class="w-10 h-10 border border-brand-dark/10 rounded-full flex items-center justify-center group-hover:bg-brand-dark group-hover:text-brand-white transition-all shrink-0">
+                <ChevronLeft size={16} />
              </div>
-             Voltar ao Portal Profissional
+             Voltar ao Portal
           </a>
-          <a href="https://wa.me/5571991951882" target="_blank" class="px-10 py-4 bg-brand-dark text-brand-white rounded-full font-bold uppercase tracking-widest text-[10px] font-sans hover:bg-brand-gold transition-all shadow-xl shadow-brand-dark/20 text-center">
+          <a href="https://wa.me/5571991951882" target="_blank" class="w-full md:w-auto px-12 py-5 bg-brand-dark text-brand-white rounded-full font-bold uppercase tracking-widest text-[10px] shadow-xl shadow-brand-dark/20 hover:bg-brand-gold transition-all text-center">
             Suporte Estratégico
           </a>
         </div>
         
-        <div class="text-center pt-8">
+        <div class="text-center">
           <a href="https://www.sitesalphacode.com.br/solucoes/psicologos" target="_blank" class="text-[9px] uppercase tracking-[0.3em] text-brand-dark/40 hover:text-brand-gold transition-colors font-black font-sans">
             Desenvolvido por Alpha Code
           </a>
