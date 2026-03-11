@@ -19,7 +19,60 @@ const { title, description = "Psicoterapia Transpessoal Sistêmica para quem bus
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Local SEO Lauro de Freitas -->
+    <meta name="keywords" content="psicóloga lauro de freitas, psicoterapia lauro de freitas, terapia presencial lauro de freitas bahia, psicoterapeuta transpessoal sistêmica, erika spinola psicanalista, saúde mental lauro de freitas, atendimento presencial vilas do atlântico" />
+    <meta name="geo.region" content="BR-BA" />
+    <meta name="geo.placename" content="Lauro de Freitas" />
+    <meta name="geo.position" content="-12.8943;-38.3275" />
+    <meta name="ICBM" content="-12.8943, -38.3275" />
+
+    <!-- Open Graph / Social SEO -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pt_BR" />
+
     <title>{title}</title>
+
+    <!-- Schema.org - LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PsychologicalService",
+        "name": "Érika Spinola - Psicoterapia Transpessoal Sistêmica",
+        "image": "/professional/logo.svg",
+        "description": "Atendimento psicoterapêutico especializado em Lauro de Freitas, Bahia. Psicoterapia Transpessoal Sistêmica presencial e online.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Consulte o endereço para atendimento presencial",
+          "addressLocality": "Lauro de Freitas",
+          "addressRegion": "BA",
+          "postalCode": "42700-000",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -12.8943,
+          "longitude": -38.3275
+        },
+        "url": "https://erika-spinola-psicanalista.vercel.app",
+        "telephone": "+5511999999999",
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      }
+    </script>
   </head>
   <body class="bg-brand-light text-brand-dark min-h-screen flex flex-col font-sans">
     <Header />
