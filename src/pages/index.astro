@@ -330,6 +330,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
 
         <AnimatedSection client:visible>
           <form
+            id="contact-form"
             class="bg-brand-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-green/5"
           >
             <h3 class="font-serif text-2xl text-brand-dark mb-8">
@@ -346,6 +347,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
                 <input
                   type="text"
                   id="name"
+                  required
                   class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
                   placeholder="Seu nome"
                 />
@@ -361,6 +363,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
                   <input
                     type="email"
                     id="email"
+                    required
                     class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
                     placeholder="seu@email.com"
                   />
@@ -374,6 +377,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
                   <input
                     type="tel"
                     id="phone"
+                    required
                     class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition"
                     placeholder="71 90000-0000"
                   />
@@ -389,15 +393,16 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
                 <textarea
                   id="message"
                   rows="5"
+                  required
                   class="w-full bg-brand-light border-0 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-gold/50 outline-none transition resize-none"
                   placeholder="Escreva aqui como posso te ajudar..."></textarea>
               </div>
 
               <button
-                type="button"
+                type="submit"
                 class="w-full bg-brand-green text-brand-white py-4 rounded-xl font-semibold hover:bg-brand-dark transition-colors duration-300 shadow-md flex items-center justify-center group"
               >
-                Enviar Mensagem
+                Enviar via WhatsApp
                 <ArrowRight
                   class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
                 />
@@ -408,4 +413,32 @@ import TestimonialCarousel from "../components/TestimonialCarousel.jsx";
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        
+        const phoneNumber = "5571991951882";
+        
+        const text = `*Nova Mensagem - Site Érika Spinola*%0A%0A` +
+                     `*Nome:* ${name}%0A` +
+                     `*Email:* ${email}%0A` +
+                     `*Telefone:* ${phone}%0A` +
+                     `*Mensagem:* ${message}`;
+        
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+        
+        window.open(whatsappUrl, '_blank');
+      });
+    }
+  </script>
+
 </Layout>
