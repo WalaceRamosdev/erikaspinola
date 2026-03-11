@@ -2,28 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import { 
   Palette, 
-  Type, 
   Layout as LayoutIcon, 
   Search, 
-  Settings, 
-  Smartphone,
-  Globe,
-  Star,
-  Zap,
-  CheckCircle2
+  ChevronLeft,
+  Settings,
+  Smartphone
 } from "lucide-astro";
 ---
 
 <Layout 
   title="Manual do Proprietário | Érika Spinola"
-  description="Manual técnico e de identidade visual para o site profissional da Érika Spinola.  <div class="bg-brand-light min-h-screen pt-40 pb-24">
+  description="Manual técnico e de identidade visual para o site profissional da Érika Spinola."
+>
+  <div class="bg-brand-light min-h-screen pt-40 pb-24 text-brand-dark">
     <div class="max-w-5xl mx-auto px-6">
       <!-- Header do Manual -->
       <header class="mb-20 text-center">
         <div class="inline-block px-4 py-1.5 bg-brand-gold/20 text-brand-dark text-[10px] font-black underline decoration-brand-gold underline-offset-4 uppercase tracking-[0.3em] rounded-sm mb-8">
           Documentação do Projeto
         </div>
-        <h1 class="font-serif text-5xl md:text-7xl text-brand-dark mb-8 leading-tight">Guia do Site</h1>
+        <h1 class="font-serif text-5xl md:text-7xl mb-8 leading-tight">Guia do Site</h1>
         <p class="text-brand-dark/70 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
           Este manual técnico e visual detalha a construção da sua presença digital, servindo como referência para a manutenção da sua identidade de marca.
         </p>
@@ -39,7 +37,7 @@ import {
               <Palette size={28} />
             </div>
             <div>
-              <h2 class="font-serif text-3xl text-brand-dark">Identidade Visual</h2>
+              <h2 class="font-serif text-3xl">Identidade Visual</h2>
               <p class="text-sm text-brand-dark/50">Cores e tipografia que definem sua marca.</p>
             </div>
           </div>
@@ -51,52 +49,53 @@ import {
                 Paleta de Cores
               </h3>
               <div class="grid grid-cols-2 gap-6">
+                <!-- Color items -->
                 <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#1F3A2E] rounded-2xl shadow-md transition-transform group-hover:scale-105 duration-300"></div>
+                  <div class="h-24 w-full bg-[#1F3A2E] rounded-2xl shadow-md border border-brand-green/10"></div>
                   <div class="mt-4">
-                    <p class="text-xs font-bold text-brand-dark">Brand Green</p>
+                    <p class="text-xs font-bold font-sans">Brand Green</p>
                     <p class="text-[10px] font-mono text-brand-dark/40">#1F3A2E</p>
                   </div>
                 </div>
                 <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#C9A96A] rounded-2xl shadow-md transition-transform group-hover:scale-105 duration-300"></div>
+                  <div class="h-24 w-full bg-[#C9A96A] rounded-2xl shadow-md border border-brand-green/10"></div>
                   <div class="mt-4">
-                    <p class="text-xs font-bold text-brand-dark">Brand Gold</p>
+                    <p class="text-xs font-bold font-sans">Brand Gold</p>
                     <p class="text-[10px] font-mono text-brand-dark/40">#C9A96A</p>
                   </div>
                 </div>
                 <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#F8F8F8] rounded-2xl shadow-md border border-zinc-100 transition-transform group-hover:scale-105 duration-300"></div>
+                  <div class="h-24 w-full bg-[#F8F8F8] rounded-2xl shadow-md border border-brand-green/10"></div>
                   <div class="mt-4">
-                    <p class="text-xs font-bold text-brand-dark">Brand White</p>
+                    <p class="text-xs font-bold font-sans">Brand White</p>
                     <p class="text-[10px] font-mono text-brand-dark/40">#F8F8F8</p>
                   </div>
                 </div>
                 <div class="group cursor-default">
-                  <div class="h-24 w-full bg-[#11221B] rounded-2xl shadow-md transition-transform group-hover:scale-105 duration-300"></div>
+                  <div class="h-24 w-full bg-[#11221B] rounded-2xl shadow-md border border-brand-green/10"></div>
                   <div class="mt-4">
-                    <p class="text-xs font-bold text-brand-dark">Brand Dark</p>
+                    <p class="text-xs font-bold font-sans">Brand Dark</p>
                     <p class="text-[10px] font-mono text-brand-dark/40">#11221B</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="bg-brand-light/30 rounded-3xl p-8 border border-brand-green/5">
+            <div class="bg-brand-light rounded-3xl p-8 border border-brand-green/10">
               <h3 class="font-black text-[10px] uppercase tracking-[0.2em] text-brand-gold mb-8 flex items-center gap-3">
                 <span class="w-8 h-px bg-brand-gold"></span>
                 Tipografia
               </h3>
               <div class="space-y-10">
                 <div>
-                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black">Fonte Principal (Luxo)</p>
-                  <p class="font-serif text-4xl text-brand-dark">Playfair Display</p>
-                  <p class="text-xs text-brand-dark/60 mt-2 font-serif italic">The quick brown fox jumps over the lazy dog</p>
+                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black font-sans">Fonte Principal (Luxo)</p>
+                  <p class="font-serif text-4xl leading-tight">Playfair Display</p>
+                  <p class="text-xs text-brand-dark/60 mt-2 font-serif italic">Transpessoalidade e elegância.</p>
                 </div>
                 <div>
-                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black">Fonte de Apoio (Leitura)</p>
-                  <p class="font-sans text-2xl text-brand-dark font-medium">Inter / Lato</p>
-                  <p class="text-xs text-brand-dark/60 mt-2">Equilíbrio e clareza para textos longos.</p>
+                  <p class="text-[9px] text-brand-dark/40 uppercase tracking-[0.2em] mb-3 font-black font-sans">Fonte de Apoio (Leitura)</p>
+                  <p class="font-sans text-2xl font-medium">Inter / Lato</p>
+                  <p class="text-xs text-brand-dark/60 mt-2">Clareza científica e equilíbrio.</p>
                 </div>
               </div>
             </div>
@@ -105,103 +104,86 @@ import {
 
         <!-- 2. Estrutura e SEO -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <!-- Estrutura -->
           <section class="lg:col-span-2 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-brand-green/5 space-y-10">
             <div class="flex items-center gap-5">
-              <div class="w-12 h-12 bg-white border-2 border-brand-gold text-brand-gold rounded-2xl flex items-center justify-center">
+              <div class="w-12 h-12 bg-white border-2 border-brand-gold text-brand-gold rounded-2xl flex items-center justify-center leading-none">
                 <LayoutIcon size={24} />
               </div>
-              <h2 class="font-serif text-3xl text-brand-dark">Estrutura</h2>
+              <h2 class="font-serif text-3xl">Arquitetura</h2>
             </div>
             
             <div class="space-y-8">
               <div class="flex gap-6">
                 <div class="text-brand-gold font-serif text-2xl italic">01</div>
                 <div>
-                  <h4 class="font-bold text-brand-dark uppercase tracking-widest text-sm mb-2">Hero Premium</h4>
-                  <p class="text-sm text-brand-dark/60 leading-relaxed">Impacto inicial com imagem FullHD e logo profissional.</p>
+                  <h4 class="font-bold uppercase tracking-widest text-[10px] mb-2 font-sans opacity-40">Seção Inicial</h4>
+                  <p class="text-lg font-serif">Hero Premium</p>
+                  <p class="text-sm text-brand-dark/60 leading-relaxed mt-1">Impacto máximo e conversão imediata.</p>
                 </div>
               </div>
               <div class="flex gap-6">
                 <div class="text-brand-gold font-serif text-2xl italic">02</div>
                 <div>
-                  <h4 class="font-bold text-brand-dark uppercase tracking-widest text-sm mb-2">Depoimentos</h4>
-                  <p class="text-sm text-brand-dark/60 leading-relaxed">Carrossel interativo com mensagens reais dos pacientes.</p>
+                  <h4 class="font-bold uppercase tracking-widest text-[10px] mb-2 font-sans opacity-40">Social Proof</h4>
+                  <p class="text-lg font-serif">Depoimentos Dinâmicos</p>
+                  <p class="text-sm text-brand-dark/60 leading-relaxed mt-1">Mensagens autênticas em carrossel React.</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- SEO -->
-          <section class="bg-brand-green rounded-[2.5rem] p-8 md:p-10 text-brand-white shadow-xl flex flex-col justify-between">
+          <section class="bg-brand-green rounded-[2.5rem] p-8 md:p-10 text-brand-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
             <div>
               <div class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center mb-8">
                 <Search size={24} />
               </div>
               <h2 class="font-serif text-3xl mb-4">SEO Local</h2>
-              <p class="text-sm text-brand-white/60 leading-relaxed mb-8">Estratégia focada em visibilidade para Lauro de Freitas e Vilas do Atlântico.</p>
+              <p class="text-xs text-brand-white/70 leading-relaxed mb-8">Foco em Lauro de Freitas e Vilas do Atlântico.</p>
               
               <ul class="space-y-4">
-                <li class="flex items-center gap-3 text-xs">
+                <li class="flex items-center gap-3 text-xs font-sans font-bold uppercase tracking-widest">
                   <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
-                  Google Maps (JSON-LD)
+                  Google Business
                 </li>
-                <li class="flex items-center gap-3 text-xs">
+                <li class="flex items-center gap-3 text-xs font-sans font-bold uppercase tracking-widest">
                   <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
-                  Geo-Tagging Bahia
-                </li>
-                <li class="flex items-center gap-3 text-xs">
-                  <div class="w-1.5 h-1.5 bg-brand-gold rounded-full"></div>
-                  Keywords Segmentadas
+                  JSON-LD Schema
                 </li>
               </ul>
             </div>
             
             <div class="mt-12 pt-8 border-t border-white/10">
-              <p class="text-[10px] uppercase tracking-widest font-bold text-brand-gold">Performance</p>
-              <p class="text-2xl font-serif">100% Mobile</p>
+              <p class="text-[9px] uppercase tracking-widest font-black text-brand-gold font-sans mb-1">Performance</p>
+              <p class="text-2xl font-serif">A+ Mobile</p>
             </div>
           </section>
         </div>
 
         <!-- Botões Finais -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-12">
-          <a href="/" class="group flex items-center gap-3 text-brand-dark font-black uppercase tracking-widest text-xs">
-            <div class="w-10 h-10 border border-brand-dark/10 rounded-full flex items-center justify-center group-hover:bg-brand-dark group-hover:text-brand-white transition-all">
-              <ChevronLeft size={18} />
-            </div>
-            Voltar ao site
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 py-12 border-t border-brand-green/10">
+          <a href="/" class="group flex items-center gap-4 text-brand-dark font-black uppercase tracking-[0.2em] text-[10px] font-sans">
+             <div class="w-8 h-8 border border-brand-dark/10 rounded-full flex items-center justify-center group-hover:bg-brand-dark group-hover:text-brand-white transition-all">
+                <ChevronLeft size={14} />
+             </div>
+             Voltar ao Portal Profissional
           </a>
-          <a href="https://wa.me/5511999999999" class="px-12 py-4 bg-brand-dark text-brand-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-gold transition-all shadow-xl shadow-brand-dark/10">
-            Suporte Técnico
+          <a href="https://wa.me/5511999999999" target="_blank" class="px-10 py-4 bg-brand-dark text-brand-white rounded-full font-bold uppercase tracking-widest text-[10px] font-sans hover:bg-brand-gold transition-all shadow-xl shadow-brand-dark/20 text-center">
+            Suporte Estratégico
           </a>
         </div>
         
         <div class="text-center pt-8">
-          <a href="https://www.sitesalphacode.com.br/solucoes/psicologos" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-brand-dark/30 hover:text-brand-gold transition-colors font-bold">
+          <a href="https://www.sitesalphacode.com.br/solucoes/psicologos" target="_blank" class="text-[9px] uppercase tracking-[0.3em] text-brand-dark/40 hover:text-brand-gold transition-colors font-black font-sans">
             Desenvolvido por Alpha Code
           </a>
         </div>
       </div>
     </div>
   </div>
-Site
-          </a>
-        </div>
-      </footer>
-
-    </div>
-  </div>
 </Layout>
 
 <style>
-  /* Custom refinements for the manual page */
-  h1, h2, h3, h4 {
-    letter-spacing: -0.02em;
-  }
-  
-  section {
-    position: relative;
-    z-index: 1;
-  }
+  h1, h2, h3, h4 { letter-spacing: -0.01em; }
+  section { position: relative; z-index: 1; }
 </style>
