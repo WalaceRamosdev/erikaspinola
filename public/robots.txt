@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.erikaspinola.com.br/sitemap-index.xml
