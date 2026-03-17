@@ -1,0 +1,95 @@
+﻿
+> erika-spinola@0.0.1 build
+> astro build
+
+10:44:12 [types] Generated 194ms
+10:44:12 [build] output: "static"
+10:44:12 [build] directory: C:\Users\HP\Documents\projetos alpha code\Erika Spinola - Psicanalista\dist\
+10:44:12 [build] Collecting build info...
+10:44:12 [build] ✓ Completed in 338ms.
+10:44:12 [build] Building static entrypoints...
+10:44:25 [WARN] [vite] 
+/noise.png referenced in /noise.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+10:44:35 [vite] [32m✓ built in 22.88s[39m
+10:44:35 [build] ✓ Completed in 22.97s.
+
+ building client (vite) 
+10:44:36 [vite] transforming...
+10:44:44 [vite] [32m✓[39m 2105 modules transformed.
+10:44:44 [vite] rendering chunks...
+10:44:44 [vite] computing gzip size...
+10:44:44 [vite] [2mdist/[22m[36m_astro/AnimatedSection.BBqELNrp.js      [39m[1m[2m  0.42 kB[22m[1m[22m[2m │ gzip:  0.31 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/jsx-runtime.TBa3i5EZ.js          [39m[1m[2m  0.92 kB[22m[1m[22m[2m │ gzip:  0.58 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/LeafParticles.CvcplTck.js        [39m[1m[2m  1.45 kB[22m[1m[22m[2m │ gzip:  0.68 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/index.CVf8TyFT.js                [39m[1m[2m  6.72 kB[22m[1m[22m[2m │ gzip:  2.68 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/TestimonialCarousel.utn5a7qi.js  [39m[1m[2m 10.69 kB[22m[1m[22m[2m │ gzip:  4.04 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/proxy.DBxViIPh.js                [39m[1m[2m111.47 kB[22m[1m[22m[2m │ gzip: 36.67 kB[22m
+10:44:44 [vite] [2mdist/[22m[36m_astro/client.BuOr9PT5.js               [39m[1m[2m135.60 kB[22m[1m[22m[2m │ gzip: 43.80 kB[22m
+10:44:44 [vite] [32m✓ built in 8.42s[39m
+
+ generating static routes 
+10:44:44 ▶ src/pages/links.astro
+10:44:44   └─ /links/index.html (+17ms)
+10:44:44 ▶ src/pages/manual.astro
+10:44:44   └─ /manual/index.html (+32ms)
+10:44:45 ▶ src/pages/index.astro
+10:44:45   └─ /index.html (+40ms)
+10:44:45 ✓ Completed in 932ms.
+
+node.exe : Cannot read 
+properties of undefined 
+(reading 'reduce')
+No C:\nvm4w\nodejs\npm.ps1
+:16 caractere:5
++     & 
+"$basedir/node$exe"  "$bas
+edir/node_modules/npm/bin/
+npm-cli.js" ...
++     ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  annot read pro...adin   
+ g 'reduce'):String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+  Location:
+    C:\Users\HP\Documents\
+projetos alpha code\Erika 
+Spinola - Psicanalista\nod
+e_modules\@astrojs\sitemap
+\dist\index.js:69:37
+  Stack trace:
+    at astro:build:done (f
+ile:///C:/Users/HP/Documen
+ts/projetos%20alpha%20code
+/Erika%20Spinola%20-%20Psi
+canalista/node_modules/@as
+trojs/sitemap/dist/index.j
+s:69:37)
+    at async 
+AstroBuilder.build (file:/
+//C:/Users/HP/Documents/pr
+ojetos%20alpha%20code/Erik
+a%20Spinola%20-%20Psicanal
+ista/node_modules/astro/di
+st/core/build/index.js:159
+:5)
+    at async build (file:/
+//C:/Users/HP/Documents/pr
+ojetos%20alpha%20code/Erik
+a%20Spinola%20-%20Psicanal
+ista/node_modules/astro/di
+st/core/build/index.js:51:
+3)
+    at async runCommand (f
+ile:///C:/Users/HP/Documen
+ts/projetos%20alpha%20code
+/Erika%20Spinola%20-%20Psi
+canalista/node_modules/ast
+ro/dist/cli/index.js:147:7
+)
