@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  icon: 'instagram' | 'article' | 'recipe';
+  href: string;
+  class?: string;
+}
+
+const { title, icon, href, class: className } = Astro.props;
+
+const icons = {
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg>`,
+  article: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>`,
+  recipe: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a3 3 0 00-3-3H5a3 3 0 00-3 3v11a1 1 0 001 1h14a1 1 0 001-1V8z"/><path d="M14 2v3"/><path d="M18 2v3"/><path d="M10 2v3"/><path d="M7 11h10"/><path d="M7 15h10"/></svg>`
+};
+---
+
+<a 
+  href={href} 
+  class={`group p-4 rounded-xl bg-white/20 border border-white/30 backdrop-blur-md flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:bg-white/40 hover:shadow-lg ${className}`}
+>
+  <div class="text-brand-gold w-6 h-6 group-hover:scale-110 transition-transform duration-300" set:html={icons[icon]} />
+  <span class="text-xs font-semibold uppercase tracking-wider text-brand-green/70 group-hover:text-brand-green transition-colors">{title}</span>
+</a>

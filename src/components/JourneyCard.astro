@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  icon: 'scale' | 'fitness' | 'wellness';
+  href: string;
+}
+
+const { title, icon, href } = Astro.props;
+
+const icons = {
+  scale: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M12 3L9 6M12 3l3 3M6 9l-3 3 3 3M18 9l3 3-3 3" /></svg>`,
+  fitness: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 7.5V6a2 2 0 012-2h8a2 2 0 012 2v1.5M6 16.5V18a2 2 0 002 2h8a2 2 0 002-2v-1.5M12 4v16M2 8h20M2 16h20" /></svg>`,
+  wellness: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 7l-2 3v4l2 3M12 7l2 3v4l2-3M9 14h6" /></svg>`
+};
+---
+
+<a 
+  href={href} 
+  class="group flex items-center justify-between p-4 rounded-xl bg-white/40 border border-white/50 shadow-sm transition-all duration-300 hover:bg-brand-gold/5 hover:border-brand-gold/20 hover:scale-[1.01]"
+>
+  <div class="flex items-center gap-4">
+    <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold/20 transition-colors">
+      <div class="w-6 h-6" set:html={icons[icon]} />
+    </div>
+    <span class="font-medium text-brand-green">{title}</span>
+  </div>
+  
+  <div class="opacity-0 group-hover:opacity-100 transition-opacity text-brand-gold">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14"></path>
+      <path d="m12 5 7 7-7 7"></path>
+    </svg>
+  </div>
+</a>

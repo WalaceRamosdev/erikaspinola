@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  highlight?: boolean;
+  icon?: 'whatsapp' | 'book' | 'star';
+}
+
+const { title, description, href, highlight = false, icon } = Astro.props;
+---
+
+<a 
+  href={href} 
+  class={`group relative w-full p-5 rounded-2xl transition-all duration-500 overflow-hidden flex items-center gap-4 ${
+    highlight 
+    ? 'bg-brand-green text-white shadow-xl hover:shadow-brand-green/20 scale-[1.02]' 
+    : 'glass-card hover:bg-white/80 hover:translate-y-[-2px] hover:shadow-lg'
+  }`}
+>
+  {highlight && (
+    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+  )}
+  
+  <div class="flex-grow">
+    <h3 class={`text-base font-semibold ${highlight ? 'text-white' : 'text-brand-green'}`}>{title}</h3>
+    <p class={`text-sm ${highlight ? 'text-white/80' : 'text-brand-green/60'}`}>{description}</p>
+  </div>
+
+  <div class={`transition-transform duration-300 group-hover:translate-x-1 ${highlight ? 'text-white/40' : 'text-brand-gold'}`}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14"></path>
+      <path d="m12 5 7 7-7 7"></path>
+    </svg>
+  </div>
+</a>
+
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  text: string;
+  author: string;
+}
+
+const { text, author } = Astro.props;
+---
+
+<div class="p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 text-left relative overflow-hidden">
+  <div class="absolute top-2 right-4 text-brand-gold/20 text-4xl serif">“</div>
+  <p class="text-brand-green/80 italic text-sm mb-3 leading-relaxed relative z-10">
+    {text}
+  </p>
+  <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">
+    — {author}
+  </p>
+</div>
