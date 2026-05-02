@@ -5,28 +5,28 @@ import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-astro';
 <footer class="bg-brand-dark text-brand-white/70 py-16 border-t border-brand-green/30">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
     
-    <div class="col-span-1 md:col-span-4 space-y-6">
-      <img src="/professional/logoText.svg" alt="Érika Spinola" class="w-48 md:w-64 scale-[1.3] origin-left object-contain brightness-0 invert opacity-90 mb-4 filter drop-shadow-[0_0_35px_rgba(201,169,106,0.85)]" />
-      <p class="text-sm leading-relaxed max-w-sm">
+    <div class="col-span-1 md:col-span-4 flex flex-col items-center md:items-start space-y-6">
+      <img src="/professional/logoText.svg" alt="Érika Spinola" class="w-48 md:w-64 scale-[1.3] mx-auto md:mx-0 md:origin-left object-contain brightness-0 invert opacity-90 mb-4 filter drop-shadow-[0_0_35px_rgba(201,169,106,0.85)]" />
+      <p class="text-sm leading-relaxed max-w-sm text-center md:text-left">
         Psicoterapeuta Especialista em Abordagem Transpessoal Sistêmica, promovendo autoconhecimento, equilíbrio e expansão da consciência.
       </p>
-      <div class="flex space-x-4 pt-2">
+      <div class="flex space-x-4 pt-2 justify-center md:justify-start">
         <a href="https://www.instagram.com/kika.terapeuta7/" target="_blank" rel="noopener" class="text-brand-gold/80 hover:text-brand-gold transition"><Instagram size={22} /></a>
         <a href="#" class="text-brand-gold/80 hover:text-brand-gold transition"><Linkedin size={22} /></a>
       </div>
     </div>
 
-    <div class="col-span-1 md:col-span-3 space-y-6">
+    <div class="col-span-1 md:col-span-3 flex flex-col items-center md:items-start space-y-6">
       <h4 class="font-sans uppercase text-xs tracking-[0.2em] text-brand-white font-semibold mb-4">Acesso Rápido</h4>
-      <ul class="space-y-3 text-sm">
+      <ul class="space-y-3 text-sm flex flex-col items-center md:items-start">
         <li><a href="#sobre" class="hover:text-brand-gold transition">Sobre Mim</a></li>
         <li><a href="#depoimentos" class="hover:text-brand-gold transition">Depoimentos</a></li>
       </ul>
     </div>
 
-    <div class="col-span-1 md:col-span-5 space-y-6">
+    <div class="col-span-1 md:col-span-5 flex flex-col items-center md:items-start space-y-6">
       <h4 class="font-sans uppercase text-xs tracking-[0.2em] text-brand-white font-semibold mb-4">Contato</h4>
-      <ul class="space-y-4 text-sm">
+      <ul class="space-y-4 text-sm flex flex-col items-center md:items-start">
         <li class="flex items-start space-x-3">
           <Phone size={18} class="text-brand-gold flex-shrink-0 mt-0.5" />
           <span>71 99195-1882</span>
@@ -41,7 +41,7 @@ import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-astro';
         </li>
       </ul>
       
-      <div class="pt-4">
+      <div class="pt-4 flex justify-center md:justify-start">
         <a href="https://wa.me/5571991951882?text=Olá Érika! Gostaria de agendar uma consulta." class="inline-flex py-3 px-8 rounded-full border border-brand-gold text-brand-gold text-sm font-medium tracking-wide hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
           Entrar em Contato
         </a>
